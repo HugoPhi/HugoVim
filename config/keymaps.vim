@@ -35,7 +35,7 @@ nnoremap <leader>x :bdelete<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>so :w!<CR>:so %<CR>
 nnoremap <leader>mp :e ~/.config/vim/config/keymaps.vim<CR>
-nnoremap <leader>g :Git 
+nnoremap <leader>g :Git
 
 vmap q <Esc>
 vnoremap " hdi"<Esc>pla"<Esc>l
@@ -58,13 +58,24 @@ tnoremap <C-j> <C-w>j
 tnoremap <C-k> <C-w>k
 
 
-"""""""""Key Maps in Plugins"""""""""
-""" syntastic 
+" """""""""Key Maps in Plugins"""""""""
+" """ syntastic
 " nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPrevious()'<CR>
 " nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
 " nmap <silent> sp    <Plug>LocationPrevious
 " nmap <silent> sn    <Plug>LocationNext
 " nnoremap <silent> <Leader>ec :SyntasticToggleMode<CR>
-
-
+" """ markdown preview
+" nnoremap <leader>m :MarkdownPreviewToggle<CR>
+" """ nerdtree
+" nmap <C-n> :NERDTreeToggle<CR>
+" """ codium
+" imap <script><silent><nowait><expr> <C-]> codeium#Accept()
+" imap <C-J>   <Cmd>call codeium#CycleCompletions(1)<CR>
+" imap <C-K>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+" imap <C-x>   <Cmd>call codeium#Clear()<CR>
+" """ code runner
+" nnoremap <C-b> :call CodeRunner()<CR>
+" """
+" nmap <F4> :IndentLinesToggle<CR>
 
