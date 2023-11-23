@@ -2,7 +2,7 @@
 
 # install vim-plug 
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://gh-proxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://mirror.ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 # check whether there is a .vimrc file and ~/.config/vim, if so, exit exceed 1 
