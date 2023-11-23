@@ -29,6 +29,7 @@ Table of Contents
 - wsl ubuntu-22.04
 - vim >= 9.0
 - git
+- use nerd font [nerd font](https://github.com/ryanoasis/nerd-fonts)  
 
 ## Installation✌️😎
 
@@ -44,7 +45,7 @@ mv ~/.config/vim ~/.config/vim.bak
 ```
 3. donwload & run install script  
 ```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -O -L https://raw.githubusercontent.com/HugoPhi/HugoVim/master/install.sh | bash 
 ```
 4. get into vim and run following commands 
 ```vim

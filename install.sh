@@ -14,5 +14,6 @@ fi
 # clone project to ~/.config/vim
 git clone https://github.com/HugoPhi/HugoVim.git ~/.config/vim
 
-
+# write info into .vimrc
+echo "import '~/.config/vim/config/init.vim'" >> ~/.vimrc
 
