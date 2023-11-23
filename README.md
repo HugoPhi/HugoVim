@@ -4,6 +4,26 @@ This project aim to provide a sub-IDE-like vim(light, structured and strong) for
 
 ![wsl ubuntu2204-2](assets/preview3.png)
 
+---
+
+Table of Contents
+=================
+
+* [HugoVim 😀🚀](#hugovim-)
+   * [Environment🌏](#environment)
+   * [Installation✌️😎](#installation️)
+   * [How to use (I mean how to change config of it so that you can make yor own vim🚀)](#how-to-use-i-mean-how-to-change-config-of-it-so-that-you-can-make-yor-own-vim)
+      * [1. ~/.vimrc](#1-vimrc)
+      * [2. ~/.config/vim](#2-configvim)
+      * [3. ~/.config/vim/config](#3-configvimconfig)
+         * [3.1. init.vim](#31-initvim)
+         * [3.2. color settings](#32-color-settings)
+         * [3.3. diy functions](#33-diy-functions)
+         * [3.4. keymaps](#34-keymaps)
+         * [3.5. plugins](#35-plugins)
+   * [screenshots](#screenshots)
+
+
 ## Environment🌏
 
 - wsl ubuntu-22.04
