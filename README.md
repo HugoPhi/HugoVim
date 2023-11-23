@@ -244,28 +244,28 @@ self defined keymaps is one of the most charm of vim. It is writen in `keymaps.v
 In this project I have donwload vim-plug as plugin manager and prepare some plugins for you to use. And the config of these plugins are in `~/.config/vim/config/plugins.vim`.    
 here are the links of them :   
 
-| 功能介绍                                   | 插件链接                                                                          |
+| Feature Description                        | Plugin Link                                                                       |
 | ----------------------------------------   | ---------------------------------------------                                     |
-| 自动补全（Completion）                     | [vim-auto-popmenu](https://github.com/skywind3000/vim-auto-popmenu)               |
-| 字典补全（Dictionary for completion）      | [vim-dict](https://github.com/skywind3000/vim-dict)                               |
-| Codeium（Codeium）                         | [codeium.vim](https://github.com/Exafunction/codeium.vim)                         |
-| C++语法增强高亮（Cpp Highlight Enhance）   | [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight) |
-| 语法检查（Syntax Check）                   | [syntastic](https://github.com/vim-syntastic/syntastic)                           |
-| 缩进线（Indent Line）                      | [indentLine](https://github.com/Yggdroot/indentLine)                              |
-| 更好的注释（Better Comments）              | [vim-better-comments](https://github.com/jbgutierrez/vim-better-comments)         |
-| Fugitive（Git插件）                        | [vim-fugitive](https://github.com/tpope/vim-fugitive)                             |
-| Git状态栏提示（Git Gutter）                | [vim-gitgutter](https://github.com/airblade/vim-gitgutter)                        |
-| FZF（模糊查找）                            | [fzf](https://github.com/junegunn/fzf)                                            |
-| FZF.vim（模糊查找插件）                    | [fzf.vim](https://github.com/junegunn/fzf.vim)                                    |
-| Markdown预览                               | [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)          |
-| Mathjax支持（Markdown预览插件）            | [mathjax-support-for-mkdp](https://github.com/iamcco/mathjax-support-for-mkdp)    |
-| 数据库操作（Dadbod）                       | [vim-dadbod](https://github.com/tpope/vim-dadbod)                                 |
-| 数据库UI（Dadbod UI）                      | [vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui)                  |
-| 显示CSS颜色（Show CSS Color）              | [vim-css-color](https://github.com/ap/vim-css-color)                              |
-| Sonokai（主题）                            | [sonokai](https://github.com/sainnhe/sonokai)                                     |
-| 文本对齐（Align Text）                     | [tabular](https://github.com/godlygeek/tabular)                                   |
-| NerdTree（文件树）                         | [nerdtree](https://github.com/preservim/nerdtree)                                 |
-| Devicons（图标支持）                       | [vim-devicons](https://github.com/ryanoasis/vim-devicons)                         |
+| Auto Completion                            | [vim-auto-popmenu](https://github.com/skywind3000/vim-auto-popmenu)               |
+| Dictionary Completion                      | [vim-dict](https://github.com/skywind3000/vim-dict)                               |
+| Codeium                                    | [codeium.vim](https://github.com/Exafunction/codeium.vim)                         |
+| Enhanced C++ Syntax Highlighting           | [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight) |
+| Syntax Checking                            | [syntastic](https://github.com/vim-syntastic/syntastic)                           |
+| Indent Line                                | [indentLine](https://github.com/Yggdroot/indentLine)                              |
+| Improved Comments                          | [vim-better-comments](https://github.com/jbgutierrez/vim-better-comments)         |
+| Fugitive (Git Plugin)                      | [vim-fugitive](https://github.com/tpope/vim-fugitive)                             |
+| Git Gutter (Git Status in the Sign Column) | [vim-gitgutter](https://github.com/airblade/vim-gitgutter)                        |
+| FZF (Fuzzy Search)                         | [fzf](https://github.com/junegunn/fzf)                                            |
+| FZF.vim (Fuzzy Search Plugin)              | [fzf.vim](https://github.com/junegunn/fzf.vim)                                    |
+| Markdown Preview                           | [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)          |
+| Mathjax Support (Markdown Preview Plugin)  | [mathjax-support-for-mkdp](https://github.com/iamcco/mathjax-support-for-mkdp)    |
+| Database Operations (Dadbod)               | [vim-dadbod](https://github.com/tpope/vim-dadbod)                                 |
+| Database UI (Dadbod UI)                    | [vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui)                  |
+| Show CSS Color                             | [vim-css-color](https://github.com/ap/vim-css-color)                              |
+| Sonokai (Theme)                            | [sonokai](https://github.com/sainnhe/sonokai)                                     |
+| Align Text                                 | [tabular](https://github.com/godlygeek/tabular)                                   |
+| NerdTree (File Tree)                       | [nerdtree](https://github.com/preservim/nerdtree)                                 |
+| Devicons (Icon Support)                    | [vim-devicons](https://github.com/ryanoasis/vim-devicons)                         |
 
 ## screenshots  
 1. on wsl archlinux  
