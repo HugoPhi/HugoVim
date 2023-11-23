@@ -99,7 +99,7 @@ this part is writen in `diy.vim`, including 'code runner', 'comment', 'indent', 
 Here are the functions of what I have add to `diy.vim`:  
 
 - `code_runner`: run code by simple type `ctrl-b`, you can add more file-type in `code_runner.vim` and change the run way according to your own conditions. Currently support(and eviroment requirements) :    
-```json
+```
 filetype:env = [ 
     'verilog':['iverilog', 'gtkwave'], 
     'c':'clang', 
