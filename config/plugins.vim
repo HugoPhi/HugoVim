@@ -3,7 +3,7 @@
 " > curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 " >     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-let g:plug_url_format='https://gh-proxy.com/https://github.com/%s.git'  " config proxy 
+let g:plug_url_format='https://mirror.ghproxy.com/https://github.com/%s.git'  " config proxy 
 
 call plug#begin('~/.config/vim/share')
 Plug 'skywind3000/vim-auto-popmenu'                                " Completion 
