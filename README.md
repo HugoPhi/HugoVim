@@ -274,7 +274,7 @@ here are the links of them :
 2. on wsl ubuntu2204   
 ![on wsl2 ubuntu2204](assets/preview1.png)
 
-***These are all I want to introduce, let's begain your adventure !!!*** 😀🚀
+***These are all I want to introduce, let's begin your adventure !!!*** 😀🚀
 
 
 
