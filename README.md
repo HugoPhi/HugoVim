@@ -2,30 +2,6 @@
 
 This project aim to provide a sub-IDE-like vim(light, structured and strong) for vim users. Hope that more people will fall in love with Vim through this project😀😀😀.
 
-Table of Contents
-=================
-
-* [HugoVim 😀🚀](#hugovim-)
-   * [Environment🌏](#environment)
-   * [Installation✌️😎](#installation️)
-   * [How to use (I mean how to change config of it so that you can make yor own vim🚀)](#how-to-use-i-mean-how-to-change-config-of-it-so-that-you-can-make-yor-own-vim)
-      * [1. ~/.vimrc](#1-vimrc)
-      * [2. ~/.config/vim](#2-configvim)
-      * [3. ~/.config/vim/config](#3-configvimconfig)
-         * [3.1. init.vim](#31-initvim)
-         * [3.4. keymaps](#34-keymaps)
-            * [Table 1: Normal Mode](#table-1-normal-mode)
-            * [Table 2: Visual Mode](#table-2-visual-mode)
-            * [Table 3: Terminal Mode](#table-3-terminal-mode)
-            * [Table 4: Other Plugins](#table-4-other-plugins)
-            * [Syntastic Plugin](#syntastic-plugin)
-            * [Markdown Preview Plugin](#markdown-preview-plugin)
-            * [NERDTree Plugin](#nerdtree-plugin)
-            * [Codium Plugin](#codium-plugin)
-            * [Code Runner Plugin](#code-runner-plugin)
-            * [Other Plugins](#other-plugins)
-         * [3.5. plugins](#35-plugins)
-
 
 ## Environment🌏
 
@@ -49,7 +25,16 @@ mv ~/.config/vim ~/.config/vim.bak
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
-4. ***Join it !!!*** 😋😍😍😍
+4. get into vim and run following commands 
+```vim
+" download all plugins (it may take a while)
+:PlugInstall 
+
+" quit, then enter again 
+" login codium AI (proxy needed)
+:Codium Auth 
+```
+5. ***Join it !!!*** 😋😍😍😍
 
 ## How to use (I mean how to change config of it so that you can make yor own vim🚀)
 
@@ -77,7 +62,7 @@ there are two sub-directories: `config` and `share`. Among them `config` is the 
 config  
 ├── colors.vim  
 ├── diy  
-│   ├── code\_runner.vim   
+│   ├── code_runner.vim   
 │   ├── comment.vim   
 │   ├── indent.vim   
 │   └── remember.vim   
@@ -98,8 +83,6 @@ I want to separate the config of vim to five parts, they are: ***color settings,
 #### 3.1. init.vim  
 this is the main file of all configs. It contains import sentences of other modules, and some basic settings.
 !!! notice that you can not change the order of import modules randomly! especially the `keymaps.vim` and `plugins.vim`. So I suggest you do not change this file unless you know what you are doing.     
-
-```
 
 
 #### 3.2. color settings
@@ -161,107 +144,76 @@ but for uncomment, those two ways are same.
 #### 3.4. keymaps
 self defined keymaps is one of the most charm of vim. It is writen in `keymaps.vim`. And you can add your own keymaps in `keymaps.vim` directly. Here are some default keymaps added by me:   
 
-##### Table 1: Normal Mode
-| Shortcut  | Mapped To                                 | Mean (Comment)                                     |
-| --------- | ------------------------------------------| -------------------------------------------------- |
-| `JK`      | `:q<CR>`                                   | Quit                                               |
-| `<C-a>`   | `gg0vG$`                                   | Select all lines                                   |
-| `<C-s>`   | `:w<CR>`                                   | Save                                               |
-| `<C-j>`   | `<C-W>j`                                   | Jump between windows, move down                    |
-| `<C-k>`   | `<C-W>k`                                   | Jump between windows, move up                      |
-| `<C-h>`   | `<C-W>h`                                   | Jump between windows, move right                   |
-| `<C-l>`   | `<C-W>l`                                   | Jump between windows, move left                    |
-| `H`       | `^`                                        | Move to line start                                 |
-| `L`       | `$`                                        | Move to line end                                   |
-| `U`       | `<C-r>`                                   | Redo                                               |
-| `<leader>mm` | `:noh<CR>`                              | Remove highlight                                   |
-| `<A-j>`   | `ddp`                                     | Move line down                                     |
-| `<A-k>`   | `ddkkp`                                   | Move line up                                       |
-| `<leader>h` | `:ter<CR><C-w><C-r><C-\><C-n>:resize -3<CR>i` | Open terminal horizontally                    |
-| `<leader>v` | `:set nowrap<CR>:vert ter<CR><C-w><C-r>`  | Open terminal vertically                           |
-| `<F3>`    | `:set scrollbind<CR>`                      | Toggle scrollbind                                  |
-| `<S-F3>`  | `:set noscrollbind<CR>`                    | Toggle scrollbind off                              |
-| `gb`      | `u<C-r>`                                  | Go back to last change                              |
-| `<tab>`   | `:bnext<CR>`                              | Next buffer                                        |
-| `<s-tab>` | `:bprevious<CR>`                          | Previous buffer                                    |
-| `<leader>fo` | `:browse oldfiles<CR>`                   | Open old files                                     |
-| `<C-c>`   | `:silent w !clip.exe<CR>`                 | Copy to clipboard                                  |
-| `<leader>x` | `:bdelete<CR>`                           | Close buffer                                       |
-| `<leader>ff` | `:Files<CR>`                            | Open file manager                                  |
-| `<leader>so` | `:w!<CR>:so %<CR>`                       | Reload vimrc                                       |
-| `<leader>mp` | `:e ~/.config/vim/config/keymaps.vim<CR>`| Open keymaps.vim                                   |
-| `<leader>g` | `:Git`                                    | Trigger git command mode, just input from vim and <CR> |
-
-##### Table 2: Visual Mode
-| Shortcut | Mapped To                                     | Mean (Comment)                                      |
-| -------- | ---------------------------------------------- | --------------------------------------------------- |
-| `q`      | `<Esc>`                                      | Exit visual mode                                    |
-| `"`      | `hdi"<Esc>pla"<Esc>l`                         | Wrap selected by `"`                                |
-| `'`      | `hdi'<Esc>pla'<Esc>l`                         | Wrap selected by `'`                                |
-| `(`      | `hdi(<Esc>pla)<Esc>l`                         | Wrap selected by `()`                               |
-| `[`      | `hdi[<Esc>pla]<Esc>l`                         | Wrap selected by `[]`                               |
-| `{`      | `hdi{<Esc>pla}<Esc>l`                         | Wrap selected by `{}`                               |
-| \`      | `hdi`<Esc>pla`<Esc>l`                         | Wrap selected by `` ` ``                            |
-| `<`      | `<gv>`                                       | Move visual block left                              |
-| `>`      | `>gv>`                                       | Move visual block right                             |
-| `<C-c>`  | `:silent w !clip.exe<CR>`                    | Copy selected to clipboard                          |
-| `H`      | `^`                                          | Select to line start                                |
-| `L`      | `$`                                          | Select to line end                                  |
-
-##### Table 3: Terminal Mode
-| Shortcut   | Mapped To                                   | Mean (Comment)                                        |
-| ---------- | -------------------------------------------- | ----------------------------------------------------- |
-| `<C-x>`    | `<C-\><C-n>`                               | Exit terminal mode                                   |
-| `<leader>q`| `<C-\><C-n>:q!<CR>:set wrap<CR>`            | Close terminal                                       |
-| `<C-h>`    | `<C-w>h`                                    | Jump from terminal to normal, jump left               |
-| `<C-l>`    | `<C-w>l`                                    | Jump from terminal to normal, jump right              |
-| `<C-j>`    | `<C-w>j`                                    | Jump from terminal to normal, jump down               |
-| `<C-k>`    | `<C-w>k`                                    | Jump from terminal to normal, jump up                 |
-
-##### Table 4: Other Plugins
-| Shortcut | Mapped To                                      | Mean (Comment)                                          |
-| -------- | ----------------------------------------------- | ------------------------------------------------------- |
-| `<leader>m` | `:MarkdownPreviewToggle<CR>`                 | Open/Close Markdown Preview                             |
-| `<C-n>`   | `:NERDTreeToggle<CR>`                        | Open/Close NERDTree                                     |
-| `<C-b>`   | `:call CodeRunner()<CR>`                     | Run code_runner                                          |
-| `<F4>`    | `:IndentLinesToggle<CR>`                      | Open/Close indent line                                  |
-
-Plugins:  
-##### Syntastic Plugin
-| Shortcut                 | Mapped To                              | Mode   | Mean                           |
-| ------------------------ | ---------------------------------------| ------ | ------------------------------ |
-| `<Plug>LocationPrevious` | `:call <SID>LocationPrevious()`        | Normal | Previous error                 |
-| `<Plug>LocationNext`     | `:call <SID>LocationNext()`            | Normal | Next error                     |
-| `<Leader>ec`             | `:SyntasticToggleMode`                 | Normal | Open/Close Syntastic           |
-
-##### Markdown Preview Plugin
-| Shortcut   | Mapped To                       | Mode   | Mean                           |
-| ---------- | -------------------------------- | ------ | ------------------------------ |
-| `<Leader>m` | `:MarkdownPreviewToggle<CR>`    | Normal | Open/Close Markdown Preview    |
-
-##### NERDTree Plugin
-| Shortcut | Mapped To             | Mode   | Mean                           |
-| -------- | ----------------------| ------ | ------------------------------ |
-| `<C-n>`  | `:NERDTreeToggle<CR>` | Normal | Open/Close NERDTree             |
-
-##### Codium Plugin
-| Shortcut | Mapped To            | Mode   | Mean                           |
-| -------- | --------------------- | ------ | ------------------------------ |
-| `<C-]>`  | `codeium#Accept()`    | Insert | Accept suggestions             |
-| `<C-J>`  | `codeium#CycleCompletions(1)` | Insert | Next suggestions          |
-| `<C-K>`  | `codeium#CycleCompletions(-1)` | Insert | Previous suggestions     |
-| `<C-x>`  | `codeium#Clear()`     | Insert | Clear suggestions              |
-
-##### Code Runner Plugin
-| Shortcut | Mapped To               | Mode   | Mean                           |
-| -------- | ------------------------| ------ | ------------------------------ |
-| `<C-b>`  | `:call CodeRunner()<CR>` | Normal | Run Code Runner                |
-
-##### Other Plugins
-| Shortcut | Mapped To                  | Mode   | Mean                           |
-| -------- | -------------------------- | ------ | ------------------------------ |
-| `<F4>`   | `:IndentLinesToggle<CR>`   | Normal | Open/Close Indent Line         |
-
+| Mode    | Short Cut | Mean                                      | Mapped To                                    | Type     |
+| ------- | --------- | ----------------------------------------- | -------------------------------------------- | -------- |
+| Insert  | `jk`      | Exit insert mode                          | `<Esc>`                                      | System   |
+| Insert  | `Ctrl+s`  | Save                                      | `:w<CR>a`                                    | System   |
+| Insert  | `'`       | Insert '' in insert mode                  | `''<Left>`                                   | System   |
+| Insert  | `"`       | Insert "" in insert mode                  | `""<Left>`                                   | System   |
+| Insert  | `(`       | Insert () in insert mode                  | `()<Left>`                                   | System   |
+| Insert  | `[`       | Insert [] in insert mode                  | `[]<Left>`                                   | System   |
+| Insert  | `{`       | Insert {} in insert mode                  | `{}<Left>`                                   | System   |
+| Insert  | `{+Enter` | Insert {} in insert mode                  | `{}<Left><CR><Esc>O`                         | System   |
+| Insert  | `gb`      | Go back to last change                    | `<Esc>u<C-r>a`                               | System   |
+| Normal  | `JK`      | Quit vim                                  | `:q<CR>`                                     | System   |
+| Normal  | `Ctrl+a`  | Select all                                | `gg0vG$`                                     | System   |
+| Normal  | `Ctrl+s`  | Save                                      | `:w<CR>`                                     | System   |
+| Normal  | `Ctrl+j`  | Jump between windows, move down           | `<C-W>j`                                     | System   |
+| Normal  | `Ctrl+k`  | Jump between windows, move up             | `<C-W>k`                                     | System   |
+| Normal  | `Ctrl+h`  | Jump between windows, move right          | `<C-W>h`                                     | System   |
+| Normal  | `Ctrl+l`  | Jump between windows, move left           | `<C-W>l`                                     | System   |
+| Normal  | `Ctrl+c`  | Copy to clipboard                         | `:silent w !clip.exe<CR>`                    | System   |
+| Normal  | `H`       | Move to line start                        | `^`                                          | System   |
+| Normal  | `L`       | Move to line end                          | `$`                                          | System   |
+| Normal  | `U`       | Redo                                      | `<C-r>`                                      | System   |
+| Normal  | `<leader>mm` | Remove highlight                         | `:noh<CR>`                                  | System   |
+| Normal  | `Alt+j`   | Move line down                            | `ddp`                                        | System   |
+| Normal  | `Alt+k`   | Move line up                              | `ddkkp`                                      | System   |
+| Normal  | `<leader>h`| Open terminal horizontally               | `:ter<CR><C-w><C-r><C-\><C-n>:resize -3<CR>i` | System   |
+| Normal  | `<leader>v`| Open terminal vertically                 | `:set nowrap<CR>:vert ter<CR><C-w><C-r>`    | System   |
+| Normal  | `F3`    | Toggle scrollbind                         | `:set scrollbind<CR>`                        | System   |
+| Normal  | `Shift+F3`  | Toggle scrollbind off                     | `:set noscrollbind<CR>`                      | System   |
+| Normal  | `gb`      | Go back to last change                    | `u<C-r>`                                    | System   |
+| Normal  | `Tab`   | Next buffer                               | `:bnext<CR>`                                | System   |
+| Normal  | `Shift+Tab` | Previous buffer                           | `:bprevious<CR>`                            | System   |
+| Normal  | `<leader>fo` | Open old files                           | `:browse oldfiles<CR>`                       | System   |
+| Normal  | `<leader>x`| Close buffer                              | `:bdelete<CR>`                              | System   |
+| Normal  | `<leader>ff` | Open file manager                       | `:Files<CR>`                                | System   |
+| Normal  | `<leader>so` | Reload vimrc                              | `:w!<CR>:so %<CR>`                          | System   |
+| Normal  | `<leader>mp` | Open keymaps.vim                         | `:e ~/.config/vim/config/keymaps.vim<CR>`   | System   |
+| Normal  | `<leader>g` | Trigger git command mode                  | `:Git`                                      | System   |
+| Normal  | `Ctrl+b`  | Run Code Runner                          | `:call CodeRunner()`                          | Diy      | 
+| Normal  | `Ctrl+/`  | Toggle Comment                           | `:call ToggleComment()`                       | Diy      |
+| Normal  | `<leader>j` | Comment                                | ` `                                           | Diy      |
+| Normal  | `<leader>k` | Uncomment                              | ` `                                           | Diy      |
+| Visual  | `q`       | Exit visual mode                          | `<Esc>`                                      | System   |
+| Visual  | `"`       | Wrap selected by `"`                      | `hdi"<Esc>pla"<Esc>l`                        | System   |
+| Visual  | `'`       | Wrap selected by `'`                      | `hdi'<Esc>pla'<Esc>l`                        | System   |
+| Visual  | `(`       | Wrap selected by `()`                     | `hdi(<Esc>pla)<Esc>l`                        | System   |
+| Visual  | `[`       | Wrap selected by `[]`                     | `hdi[<Esc>pla]<Esc>l`                        | System   |
+| Visual  | `{`       | Wrap selected by `{}`                     | `hdi{<Esc>pla}<Esc>l`                        | System   |
+| Visual  | \`       | Wrap selected by `` ` ``                   | `hdi`<Esc>pla`<Esc>l`                        | System   |
+| Visual  | `<`       | Move visual block left                    | `<gv>`                                      | System   |
+| Visual  | `>`       | Move visual block right                   | `>gv>`                                      | System   |
+| Visual  | `Ctrl+c`   | Copy selected to clipboard               | `:silent w !clip.exe<CR>`                   | System   |
+| Visual  | `H`       | Select to line start                      | `^`                                          | System   |
+| Visual  | `L`       | Select to line end                        | `$`                                          | System   |
+| Terminal | `Ctrl+x` | Exit terminal mode                        | `<C-\><C-n>`                                | System   |
+| Terminal | `<leader>q`| Close terminal                            | `<C-\><C-n>:q!<CR>:set wrap<CR>`            | System   |
+| Terminal | `Ctrl+h` | Jump from terminal to normal, jump left    | `<C-w>h`                                 | System   |
+| Terminal | `Ctrl+l` | Jump from terminal to normal, jump right   | `<C-w>l`                                | System   |
+| Terminal | `Ctrl+j` | Jump from terminal to normal, jump down    | `<C-w>j`                                | System   |
+| Terminal | `Ctrl+k` | Jump from terminal to normal, jump up      | `<C-w>k`                                 | System   |
+| Normal | `sp`       | Previous Error                             | `:LocationPrevious<CR>`                    | Syntastic |  
+| Normal | `sn`       | Next Error                                 | `:LocationNext<CR>`                        | Syntastic |
+| Normal | `<Leader>ec`| Toggle Syntastic | `:SyntasticToggleMode<CR>`                                          | Syntastic |
+| Normal | `<leader>m`| Open/Close Markdown Preview         | `:MarkdownPreviewToggle<CR>`                      | Markdown-Preview |
+| Normal | `Ctrl+n`   | Open/Close NERDTree                      | `:NERDTreeToggle<CR>`                        | NERDTree  |
+| Insert  | `Ctrl+]` | Accept suggestions by codeium AI   | `codeium#Accept()`                                  | Codium   |
+| Insert  | `Ctrl+Shift+j`   | Next suggestions by codeium AI            | `call codeium#CycleCompletions(1)`          | Codium   |
+| Insert  | `Ctrl+Shift+k`   | Previous suggestions by codeium AI        | `call codeium#CycleCompletions(-1)`         | Codium   |
+| Insert  | `Ctrl+x`   | Clear suggestions by codeium AI           | `call codeium#Clear()`                      | Codium   |
+| Normal | `F4`  | Open/Close indent line                    | `:IndentLinesToggle<CR>`                    | Indent Lines |
 
 #### 3.5. plugins
 In this project I have donwload vim-plug as plugin manager and prepare some plugins for you to use. And the config of these plugins are in `~/.config/vim/config/plugins.vim`.  
