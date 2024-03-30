@@ -29,6 +29,7 @@ set vb
 set vb t_vb=
 set textwidth=1000000
 autocmd BufNew,BufEnter * exec ":set nocursorline"
+autocmd BufNew,BufEnter * exec ":so ~/.vimrc"
 """"""""""""""""""""""""""""""""""""""
 
 import '~/.config/vim/config/plugins.vim'

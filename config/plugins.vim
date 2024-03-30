@@ -21,21 +21,24 @@ Plug 'airblade/vim-gitgutter'                                      " git
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }                " fzf
 Plug 'junegunn/fzf.vim'                                            " ~
 
-Plug 'iamcco/markdown-preview.nvim'                                " markdown preview
-Plug 'iamcco/mathjax-support-for-mkdp'                             " ~
+" Plug 'iamcco/markdown-preview.nvim'                                " markdown preview
+" Plug 'iamcco/mathjax-support-for-mkdp'                             " ~
 "! please run  ":call mkdp#util#install()" before use "MarkdownPreview"
 
 Plug 'tpope/vim-dadbod'                                            " database 
 Plug 'kristijanhusak/vim-dadbod-ui'                                " database ui 
 
 Plug 'ap/vim-css-color'                                            " show css color 
-Plug 'sainnhe/sonokai'                                             " sonokai
+Plug 'pacokwon/onedarkhc.vim'                                      " onedarkhc 
+Plug 'cormacrelf/vim-colors-github'                                " github theme 
 
 Plug 'godlygeek/tabular'                                           " align text
 """ usage: Just select what you what, and then input command: ":Tabularize/pattern", for example: ":Tabularize /," then the selected text will be aligned by ","
 
 Plug 'preservim/nerdtree'                                          " file tree
-Plug 'ryanoasis/vim-devicons'                                      " ~
+" Plug 'ryanoasis/vim-devicons'                                      " ~
+
+Plug 'luochen1990/rainbow'                                         " rainbow bracket
 
 call plug#end()
 
