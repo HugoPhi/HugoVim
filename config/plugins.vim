@@ -29,7 +29,8 @@ Plug 'tpope/vim-dadbod'                                            " database
 Plug 'kristijanhusak/vim-dadbod-ui'                                " database ui 
 
 Plug 'ap/vim-css-color'                                            " show css color 
-Plug 'sainnhe/sonokai'                                             " sonokai
+" Plug 'sainnhe/sonokai'                                             " sonokai
+Plug 'cormacrelf/vim-colors-github'                                " github
 
 Plug 'godlygeek/tabular'                                           " align text
 """ usage: Just select what you what, and then input command: ":Tabularize/pattern", for example: ":Tabularize /," then the selected text will be aligned by ","

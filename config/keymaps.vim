@@ -30,7 +30,7 @@ nmap gb u<C-r>
 nmap <tab> :bnext<CR>
 nmap <s-tab> :bprevious<CR>
 nmap <leader>fo :browse oldfiles<CR>
-nnoremap <C-c> :silent w !clip.exe<CR>
+nmap <c-[> <c-t>
 nnoremap <leader>x :bdelete<CR>
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>so :w!<CR>:so %<CR>
@@ -46,7 +46,6 @@ vnoremap { hdi{<Esc>pla}<Esc>l
 vnoremap ` hdi`<Esc>pla`<Esc>l
 vnoremap < <gv
 vnoremap > >gv
-vnoremap <C-c> :silent w !clip.exe<CR>
 vnoremap H ^
 vnoremap L $
 
